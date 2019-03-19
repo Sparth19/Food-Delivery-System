@@ -21,7 +21,8 @@
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.html">Food Delivery System</a>
-			<button id="toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" style="
+			<button id="toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				style="
     padding-left: 0px;
     padding-right: 0px;
     border-left-width: 0px;
@@ -36,35 +37,23 @@
 						<a class="nav-link" href="index.html">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Menu</a>
+						<a class="nav-link" href="menu.html">Menu</a>
 					</li>
 
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Menu</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-						</div>
-						</li> 
-
-					<li class="nav-item dropdown">
-			         <a class="nav-link dropdown-toggle" href="#"" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			           Dropdown link  </a>
-			         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			           <li><a class="dropdown-item" href="#">Action</a></li>
-			           <li><a class="dropdown-item" href="#">Another action</a></li>
-			           <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
-			             <ul class="dropdown-menu">
-			               <li><a class="dropdown-item" href="#">Submenu action</a></li>
 
 					<li class="nav-item">
 						<a class="nav-link" href="#">About</a>
 					</li>
 
 
-					<div class="input-group-btn">
-						<button class="btn btn-success" onclick="document.getElementById('id01').style.display='block',document.getElementById('id02').style.display='none'" type="submit">Login</button>
+					<div class="input-group-btn btn-group">
+						<button class="btn btn-outline-success"
+							onclick="document.getElementById('id01').style.display='block',document.getElementById('id02').style.display='none'"
+							type="submit">Login</button>
+							<button class="btn btn-outline-primary"
+							onclick="document.getElementById('id02').style.display='block',document.getElementById('id01').style.display='none'"
+							type="submit">Sign UP</button>
 					</div>
 				</ul>
 			</div>
@@ -108,7 +97,8 @@
 		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 centered">
 			<form class="navbar-form " role="search">
 				<div class="input-group add-on">
-					<input class="form-control" placeholder="Search for Restaurants or Dishes..." name="srch-term" id="srch-term" type="text">
+					<input class="form-control" placeholder="Search for Restaurants or Dishes..." name="srch-term" id="srch-term"
+						type="text">
 					<div class="input-group-btn">
 						<button class="btn btn-primary" type="submit">SEARCH</button>
 					</div>
@@ -190,7 +180,10 @@
 	<div id="id01" class="modal">
 		<form class="modal-content" action="">
 			<div class="container">
+					<i class="fa fa-window-close" aria-hidden="true" onclick="document.getElementById('id01').style.display='none'"></i>
+
 				<h1>Login</h1>
+
 				<p>Please Enter detail to Login.</p>
 				<hr>
 
@@ -201,7 +194,9 @@
 				<input type="password" placeholder="Enter Password" name="loginpw" required>
 
 				<label for="newuser">New User ?</label>
-				<button class="btn btn-light" onclick="document.getElementById('id02').style.display='block',document.getElementById('id01').style.display='none'" type="submit">Create new Account</button>
+				<button class="btn btn-link"
+					onclick="document.getElementById('id02').style.display='block',document.getElementById('id01').style.display='none'"
+					type="submit">Create new Account</button>
 
 				<div class="clearfix">
 					<div class="row">
@@ -209,7 +204,8 @@
 							<button type="submit" class="signupbtn btn btn-success">Login</button>
 						</div>
 						<div class="col-sm-6">
-							<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+								<button type="reset" class="cancelbtn btn btn-danger">Reset</button>
+
 						</div>
 					</div>
 				</div>
@@ -217,22 +213,23 @@
 		</form>
 	</div>
 
-<script>
+	<script>
 		// Get the modal
-	/*	var modal = document.getElementById('id01');
-		var modal2 = document.getElementById('id02');
+		/*	var modal = document.getElementById('id01');
+			var modal2 = document.getElementById('id02');
 
-		window.onclick = function(event) {
-			if (event.target == modal || event.target == modal2) {
-				modal.style.display = "none";
-			}
-		}*/
+			window.onclick = function(event) {
+				if (event.target == modal || event.target == modal2) {
+					modal.style.display = "none";
+				}
+			}*/
 	</script>
 
 	<!--Register-->
 	<div id="id02" class="modal">
 		<form class="modal-content" action="">
 			<div class="container">
+					<i class="fa fa-window-close" aria-hidden="true" onclick="document.getElementById('id02').style.display='none'"></i>
 				<h1>Sign Up</h1>
 				<p>Please fill in this form to create an account.</p>
 				<hr>
@@ -249,7 +246,8 @@
 				<input type="password" onchange="checkPasswordMatch();" placeholder="Enter Password" id="pw" name="pw" required>
 
 				<label for="cpw"><b>Confirm Password</b></label>
-				<input type="password" onchange="checkPasswordMatch();" placeholder="Confirm Password" id="cpw" name="cpw" required>
+				<input type="password" onchange="checkPasswordMatch();" placeholder="Confirm Password" id="cpw" name="cpw"
+					required>
 
 				<span id='message'></span>
 				<div class="clearfix">
@@ -258,13 +256,16 @@
 							<button type="submit" class="signupbtn btn btn-success">Sign Up</button>
 						</div>
 						<div class="col-sm-6">
-							<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+								<button type="reset" class="cancelbtn btn btn-danger">Reset</button>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</form>
 	</div>
+
+	<!--Floating Button-->
 
 
 	<footer>
@@ -278,4 +279,3 @@
 </body>
 
 </html>
-
